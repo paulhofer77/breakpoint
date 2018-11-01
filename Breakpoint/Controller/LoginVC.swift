@@ -10,21 +10,55 @@ import UIKit
 
 class LoginVC: UIViewController {
 
+    
+    
+    @IBOutlet weak var emailTextfield: InsetTextfield!
+    
+    @IBOutlet weak var passwortTextfield: InsetTextfield!
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        emailTextfield.delegate = self
+        passwortTextfield.delegate = self
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func closeButtonPressed(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
     }
-    */
+    
+    @IBAction func signInButtonPressed(_ sender: Any) {
+        
+        if emailTextfield.text != nil && passwortTextfield.text != nil {
+            AuthService.instance.loginUser(withEmail: emailTextfield.text!, andPassword: passwortTextfield.text!) { (success, loginError) in
+                if success {
+                    self.dismiss(animated: true, completion: nil)
+                } else {
+                    print(String(describing: loginError?.localizedDescription))
+                }
+                
+                AuthService.instance.registerUser(withEmail: self.emailTextfield.text!, andPassword: self.passwortTextfield.text!, userCreationComplete: { (success, registrationError) in
+                    if success {
+                        AuthService.instance.loginUser(withEmail: self.emailTextfield.text!, andPassword: self.passwortTextfield.text!, loginComplete: { (succes, nil) in
+                            self.dismiss(animated: true, completion: nil)
+                        })
+                    } else {
+                        print(String(describing: registrationError?.localizedDescription))
+                    }
+                })
+            }
+        }
+        
+        
+    }
+    
 
+}
+
+
+
+
+
+extension LoginVC: UITextFieldDelegate {
+    
 }
