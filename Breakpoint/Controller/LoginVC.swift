@@ -34,15 +34,18 @@ class LoginVC: UIViewController {
                 if success {
                     self.dismiss(animated: true, completion: nil)
                 } else {
+                    print("LOGIN ERROR at FIRST LOGIN")
                     print(String(describing: loginError?.localizedDescription))
                 }
                 
                 AuthService.instance.registerUser(withEmail: self.emailTextfield.text!, andPassword: self.passwortTextfield.text!, userCreationComplete: { (success, registrationError) in
                     if success {
-                        AuthService.instance.loginUser(withEmail: self.emailTextfield.text!, andPassword: self.passwortTextfield.text!, loginComplete: { (succes, nil) in
-                            self.dismiss(animated: true, completion: nil)
-                        })
+                        self.dismiss(animated: true, completion: nil)
+//                        AuthService.instance.loginUser(withEmail: self.emailTextfield.text!, andPassword: self.passwortTextfield.text!, loginComplete: { (succes, nil) in
+//                            self.dismiss(animated: true, completion: nil)
+//                        })
                     } else {
+                        print("LOGIN ERROR at Registration")
                         print(String(describing: registrationError?.localizedDescription))
                     }
                 })

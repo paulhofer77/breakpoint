@@ -28,6 +28,10 @@
 		C64841D3218BC2BD00EFBF7F /* CreateGroupsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C64841D2218BC2BD00EFBF7F /* CreateGroupsVC.swift */; };
 		C64841D5218BC42F00EFBF7F /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C64841D4218BC42F00EFBF7F /* UserCell.swift */; };
 		C64841D7218CA3F500EFBF7F /* GroupCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C64841D6218CA3F500EFBF7F /* GroupCell.swift */; };
+		C64841D9218CA72900EFBF7F /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = C64841D8218CA72900EFBF7F /* Group.swift */; };
+		C6CCB049218E1A040069C347 /* GroupFeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6CCB048218E1A040069C347 /* GroupFeedCell.swift */; };
+		C6CCB04B218E1A910069C347 /* GroupFeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6CCB04A218E1A910069C347 /* GroupFeedVC.swift */; };
+		C6CCB04D218E56AF0069C347 /* UIViewControllerExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6CCB04C218E56AF0069C347 /* UIViewControllerExt.swift */; };
 		FB59BEE05CF34D47BCC05829 /* Pods_Breakpoint.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37032FD592EF73B734858390 /* Pods_Breakpoint.framework */; };
 /* End PBXBuildFile section */
 
@@ -58,6 +62,10 @@
 		C64841D2218BC2BD00EFBF7F /* CreateGroupsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateGroupsVC.swift; sourceTree = "<group>"; };
 		C64841D4218BC42F00EFBF7F /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
 		C64841D6218CA3F500EFBF7F /* GroupCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupCell.swift; sourceTree = "<group>"; };
+		C64841D8218CA72900EFBF7F /* Group.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
+		C6CCB048218E1A040069C347 /* GroupFeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupFeedCell.swift; sourceTree = "<group>"; };
+		C6CCB04A218E1A910069C347 /* GroupFeedVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupFeedVC.swift; sourceTree = "<group>"; };
+		C6CCB04C218E56AF0069C347 /* UIViewControllerExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExt.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +126,7 @@
 				C64841C4218B5D4500EFBF7F /* MeVC.swift */,
 				C64841C6218B613200EFBF7F /* CreatePostVC.swift */,
 				C64841D2218BC2BD00EFBF7F /* CreateGroupsVC.swift */,
+				C6CCB04A218E1A910069C347 /* GroupFeedVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -130,6 +139,7 @@
 				C64841CA218B6AF900EFBF7F /* FeedCell.swift */,
 				C64841D4218BC42F00EFBF7F /* UserCell.swift */,
 				C64841D6218CA3F500EFBF7F /* GroupCell.swift */,
+				C6CCB048218E1A040069C347 /* GroupFeedCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -138,6 +148,7 @@
 			isa = PBXGroup;
 			children = (
 				C64841CC218B6C4400EFBF7F /* Message.swift */,
+				C64841D8218CA72900EFBF7F /* Group.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -146,6 +157,7 @@
 			isa = PBXGroup;
 			children = (
 				C64841C8218B64E400EFBF7F /* UIViewExt.swift */,
+				C6CCB04C218E56AF0069C347 /* UIViewControllerExt.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -308,10 +320,14 @@
 				C64841C5218B5D4500EFBF7F /* MeVC.swift in Sources */,
 				C64841D7218CA3F500EFBF7F /* GroupCell.swift in Sources */,
 				C64841BB218B3D1C00EFBF7F /* AuthVC.swift in Sources */,
+				C6CCB04D218E56AF0069C347 /* UIViewControllerExt.swift in Sources */,
 				C64841D1218B702900EFBF7F /* FeedVc.swift in Sources */,
+				C6CCB04B218E1A910069C347 /* GroupFeedVC.swift in Sources */,
+				C6CCB049218E1A040069C347 /* GroupFeedCell.swift in Sources */,
 				C64841BD218B3D2C00EFBF7F /* LoginVC.swift in Sources */,
 				C64841C3218B43FF00EFBF7F /* AuthService.swift in Sources */,
 				C64841D3218BC2BD00EFBF7F /* CreateGroupsVC.swift in Sources */,
+				C64841D9218CA72900EFBF7F /* Group.swift in Sources */,
 				C64841D5218BC42F00EFBF7F /* UserCell.swift in Sources */,
 				C61413CD218B30220007B0B5 /* AppDelegate.swift in Sources */,
 				C64841C1218B413C00EFBF7F /* ShadowView.swift in Sources */,
